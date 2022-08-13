@@ -1,0 +1,9 @@
+<div>
+  <div>
+    <ul>
+      <li *ngFor="let i of arr; let i = index" (click)="onClickItem(i)">*</li>
+    </ul>
+  </div>
+</div>
+
+<p>User rated: {{ index }}/5</p>
