@@ -1,9 +1,15 @@
 <div>
-  <div>
-    <ul>
-      <li *ngFor="let i of arr; let i = index" (click)="onClickItem(i)">*</li>
-    </ul>
-  </div>
+  <ul>
+    <li
+      *ngFor="let item of arr"
+      (click)="onClickItem(item.value)"
+      (mouseover)="onMouseHover(item.value)"
+      (mouseleave)="onMouseLeave()"
+      [style.color]="item.color"
+    >
+      *
+    </li>
+  </ul>
 </div>
 
-<p>User rated: {{ index }}/5</p>
+<p>User Rated: {{ index }}/5</p>
